@@ -1,0 +1,27 @@
+{
+  "name": "cv",
+  "version": "0.1.0",
+  "description": "Like a pro frontend",
+  "main": "index.js",
+  "repository": "https://github.com/0k6r/cv.git",
+  "author": "Konstantin Petrov <oku6er@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "webpack-dev-server --open --mode development",
+    "prod": "webpack --mode production",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bugs": {
+    "email": "oku6er@gmail.com",
+    "url": "https://github.com/0k6r/cv/issues"
+  },
+  "homepage": "https://github.com/0k6r/cv#readme",
+  "devDependencies": {
+    "path": "^0.12.7",
+    "webpack" : "^4.29.6",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.2.1"
+  }
+}
+
