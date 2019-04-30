@@ -1,8 +1,7 @@
-const path = require('path')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-
+import path from 'path'
+import { MiniCssExtractPlugin } from 'mini-css-extract-plugin'
+import { CopyWebpackPlugin } from 'copy-webpack-plugin'
+import { HtmlWebpackPlugin } from 'html-webpack-plugin'
 
 const PATHS = {
     src: path.join(__dirname, '../src'),
@@ -10,7 +9,7 @@ const PATHS = {
     assets: 'assets'
 }
 
-module.exports = {
+export default {
     externals: {
         paths: PATHS
     },
@@ -31,29 +30,29 @@ module.exports = {
             test: /\.scss$/,
             use: [
                 'style-loader',
-                MiniCssExtractPlugin.loader,
+                loader,
                 {
                     loader: 'css-loader',
-                    options: {sourceMap: true}
+                    options: { sourceMap: true }
                 }, {
                     loader: 'postcss-loader',
-                    options: {sourceMap: true, config: {path: `${PATHS.src}/js/config/postcss.config.js`}}
+                    options: { sourceMap: true, config: { path: `${PATHS.src}/js/config/postcss.config.js` } }
                 }, {
                     loader: 'sass-loader',
-                    options: {sourceMap: true}
+                    options: { sourceMap: true }
                 }
             ]
         }, {
             test: /\.css$/,
             use: [
                 'style-loader',
-                MiniCssExtractPlugin.loader,
+                loader,
                 {
                     loader: 'css-loader',
-                    options: {sourceMap: true}
+                    options: { sourceMap: true }
                 }, {
                     loader: 'postcss-loader',
-                    options: {sourceMap: true, config: {path: `${PATHS.src}/js/config/postcss.config.js`}}
+                    options: { sourceMap: true, config: { path: `${PATHS.src}/js/config/postcss.config.js` } }
                 }
             ]
         }, {
@@ -85,5 +84,4 @@ module.exports = {
             filename: './index.html'
         })
     ],
-}
-;
+};
