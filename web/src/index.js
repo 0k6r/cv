@@ -4,16 +4,20 @@
 
 // import Vue from 'vue'
 window.Vue = require('vue')
-import store from './store'
+import store from './store/index'
+import router from './router'
+import App from './App.vue'
 
-Vue.component('example-component', require('./components/Example.vue').default)
+// Vue.component('example-component', require('./components/Example.vue').default)
 
-const app = new Vue({
-  data () {
-    return {
-      component: false,
-    }
-  },
+new Vue({
+  // data () {
+  //   return {
+  //     component: false,
+  //   }
+  // },
+  el: '#app',
+  router,
   store,
-  el: '#app'
+  render: h => h(App) 
 })

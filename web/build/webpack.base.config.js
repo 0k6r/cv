@@ -5,12 +5,12 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { VueLoaderPlugin } = require('vue-loader')
 
 const PATHS = {
-    src: path.join(__dirname, '../src'),
-    dist: path.join(__dirname, '../dist'),
-    assets: 'assets'
+  src: path.join(__dirname, '../src'),
+  dist: path.join(__dirname, '../dist'),
+  assets: 'assets'
 }
 
-module.exports={
+module.exports = {
   externals: {
     paths: PATHS
   },
@@ -80,7 +80,7 @@ module.exports={
   plugins: [
     new VueLoaderPlugin(),
     new MiniCssExtractPlugin({
-      filename: `${PATHS.assets}/css/[name].css`,
+      filename: `${PATHS.assets}/css/[name].css`
     }),
     // Copy HtmlWebpackPlugin and change index.html for another html page
     new HtmlWebpackPlugin({
@@ -90,7 +90,7 @@ module.exports={
     }),
     new CopyWebpackPlugin([
       { from: `${PATHS.src}/assets/img`, to: `${PATHS.assets}/img` },
-      { from: `${PATHS.src}/static`, to: '' },
+      { from: `${PATHS.src}/static`, to: '' }
     ])
-  ],
+  ]
 }

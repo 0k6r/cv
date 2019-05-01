@@ -20,8 +20,9 @@
   "homepage": "https://github.com/0k6r/cv#readme",
   "dependencies": {
     "semantic-ui-vue": "^0.8.1",
-    "vue": "^2.6.8",
-    "vuex": "^3.1.0"
+    "vue": "^2.6.10",
+    "vuex": "^3.1.0",
+    "vue-router": "^3.0.6"
   },
   "devDependencies": {
     "@babel/core": "^7.4.4",
@@ -54,7 +55,6 @@
     "vue-loader": "^15.7.0",
     "vue-style-loader": "^4.1.2",
     "vue-template-compiler": "^2.6.10",
-    "vue-route": "^1.5.1",
     "webpack": "^4.30.0",
     "webpack-cli": "^3.3.1",
     "webpack-dev-server": "^3.3.1",
