@@ -1,5 +1,5 @@
 import merge from 'webpack-merge';
-import baseWebpackConfig from './webpack.base.config';
+import { baseWebpackConfig } from 'webpack.base.config.js';
 
 const buildWebpackConfig = merge(baseWebpackConfig, {
     mode: 'production',
